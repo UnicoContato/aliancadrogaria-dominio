@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drogaria Aliança</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#004aad',
+                            light: '#00a8e8',
+                            dark: '#002855'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans overflow-x-hidden relative">
+
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-light/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-purple-300/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-32 left-1/3 w-96 h-96 bg-brand-blue/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold text-brand-blue tracking-tight">Drogaria <span class="text-brand-light">Aliança</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#inicio" class="text-gray-700 hover:text-brand-blue font-medium transition">Início</a>
+                    <a href="#sobre" class="text-gray-700 hover:text-brand-blue font-medium transition">Sobre</a>
+                    <a href="#servicos" class="text-gray-700 hover:text-brand-blue font-medium transition">Serviços</a>
+                    <a href="#galeria" class="text-gray-700 hover:text-brand-blue font-medium transition">Galeria</a>
+                    <a href="#contato" class="text-gray-700 hover:text-brand-blue font-medium transition">Contato</a>
+                    <a href="https://wa.me/551735222140" target="_blank" class="bg-brand-blue text-white px-5 py-2 rounded-full hover:bg-brand-dark transition shadow-lg hover:shadow-brand-blue/30 font-semibold text-sm">
+                        (17) 3522-2140
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-brand-blue focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden glassmorphism absolute w-full border-t border-white/20">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#inicio" class="block px-3 py-2 text-gray-700 hover:text-brand-blue font-medium">Início</a>
+                <a href="#sobre" class="block px-3 py-2 text-gray-700 hover:text-brand-blue font-medium">Sobre</a>
+                <a href="#servicos" class="block px-3 py-2 text-gray-700 hover:text-brand-blue font-medium">Serviços</a>
+                <a href="#galeria" class="block px-3 py-2 text-gray-700 hover:text-brand-blue font-medium">Galeria</a>
+                <a href="#contato" class="block px-3 py-2 text-gray-700 hover:text-brand-blue font-medium">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="hero-bg w-full h-full bg-cover bg-center absolute" style="background-image: url('img/1.jpeg');"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-dark/90 to-brand-blue/40"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto reveal-up">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                Cuidando de você e da <br><span class="text-brand-light">sua família.</span>
+            </h1>
+            <p class="text-xl text-gray-100 mb-10 max-w-2xl mx-auto font-light">
+                Medicamentos, perfumaria e atendimento farmacêutico de excelência em Itajobi.
+            </p>
+            <a href="#contato" class="inline-block px-8 py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold rounded-full hover:bg-white hover:text-brand-blue transition transform hover:-translate-y-1 hover:shadow-2xl text-lg">
+                Fale Conosco Agora
+            </a>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white/50">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="reveal-left">
+                    <h2 class="text-brand-light font-semibold uppercase tracking-wider text-sm mb-2">Quem Somos</h2>
+                    <h3 class="text-4xl font-bold text-brand-dark mb-6">Tradição e confiança no atendimento farmacêutico.</h3>
+                    <div class="text-gray-600 space-y-4 text-lg leading-relaxed">
+                        <p>
+                            A Drogaria Aliança tem como missão cuidar da saúde e do bem-estar da comunidade, oferecendo atendimento de qualidade, confiança e responsabilidade. Ao longo da nossa trajetória, construímos uma relação de proximidade com nossos clientes, sempre prezando por um atendimento humanizado e pela orientação farmacêutica adequada.
+                        </p>
+                        <p>
+                            Disponibilizamos uma ampla variedade de medicamentos e produtos de saúde, higiene e bem-estar, além de serviços farmacêuticos como aplicação de injetáveis, aferição de pressão arterial, glicemia capilar e verificação de temperatura, realizados por profissionais capacitados e seguindo todas as normas de segurança.
+                        </p>
+                    </div>
+                </div>
+                <div class="relative reveal-right">
+                    <div class="absolute -inset-4 bg-brand-light/30 rounded-2xl blur-lg transform rotate-2"></div>
+                    <img src="img/2.jpeg" alt="Fachada Drogaria Aliança" class="relative rounded-2xl shadow-2xl object-cover h-[500px] w-full border border-white/20">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-24 bg-white/30 backdrop-blur-sm relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal-up">
+                <h2 class="text-brand-light font-semibold uppercase tracking-wider text-sm mb-2">O que oferecemos</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-brand-dark">Nossos Serviços</h3>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glassmorphism p-8 rounded-2xl hover:bg-white/40 transition duration-300 transform hover:-translate-y-2 reveal-up card-hover">
+                    <div class="w-14 h-14 bg-brand-blue/10 rounded-full flex items-center justify-center text-brand-blue mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Medicamentos</h4>
+                    <p class="text-gray-600">Ampla linha de medicamentos éticos, genéricos e similares com procedência garantida e ótimos preços.</p>
+                </div>
+
+                <div class="glassmorphism p-8 rounded-2xl hover:bg-white/40 transition duration-300 transform hover:-translate-y-2 reveal-up card-hover delay-100">
+                    <div class="w-14 h-14 bg-brand-blue/10 rounded-full flex items-center justify-center text-brand-blue mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Atenção Farmacêutica</h4>
+                    <p class="text-gray-600">Aferição de pressão arterial, glicemia, aplicação de injetáveis e orientação profissional completa.</p>
+                </div>
+
+                <div class="glassmorphism p-8 rounded-2xl hover:bg-white/40 transition duration-300 transform hover:-translate-y-2 reveal-up card-hover delay-200">
+                    <div class="w-14 h-14 bg-brand-blue/10 rounded-full flex items-center justify-center text-brand-blue mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Perfumaria & Beleza</h4>
+                    <p class="text-gray-600">Linha completa de higiene pessoal, cosméticos, dermocosméticos e cuidados infantis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal-up">
+                <h3 class="text-3xl md:text-4xl font-bold text-brand-dark">Conheça Nossa Loja</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="reveal-up delay-100 group overflow-hidden rounded-2xl relative">
+                    <img src="img/3.jpeg" alt="Interior Loja 1" class="w-full h-[500px] object-cover transition duration-500 transform group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white font-medium">Ambiente Moderno</span>
+                    </div>
+                </div>
+                <div class="reveal-up delay-200 group overflow-hidden rounded-2xl relative">
+                    <img src="img/4.jpeg" alt="Interior Loja 2" class="w-full h-[500px] object-cover transition duration-500 transform group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white font-medium">Variedade de Produtos</span>
+                    </div>
+                </div>
+                <div class="reveal-up delay-300 group overflow-hidden rounded-2xl relative md:col-span-2 lg:col-span-1">
+                    <img src="img/5.jpeg" alt="Interior Loja 3" class="w-full h-[500px] object-cover transition duration-500 transform group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white font-medium">Atendimento Especializado</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-24 bg-brand-dark relative z-10 text-white overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-20 bg-[url('https://www.transparenttextures.com/patterns/medical-icons.png')]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="reveal-left">
+                    <h2 class="text-brand-light font-bold text-sm uppercase tracking-wider mb-2">Localização</h2>
+                    <h3 class="text-3xl font-bold mb-8">Onde Estamos</h3>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+                                <svg class="w-6 h-6 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Endereço</h4>
+                                <p class="text-gray-300">Av. Catanduva, 615, Anexo 2</p>
+                                <p class="text-gray-300">Colina do Sol, Itajobi - SP</p>
+                                <p class="text-gray-400 text-sm mt-1">CEP: 15.840-000</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+                                <svg class="w-6 h-6 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Contato</h4>
+                                <p class="text-gray-300 hover:text-white transition"><a href="tel:+551735222140">(17) 3522-2140</a></p>
+                                <p class="text-gray-300 text-sm mt-1 break-all">JURISCONTABIL01@UOL.COM.BR</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+                                <svg class="w-6 h-6 text-brand-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Dados da Empresa</h4>
+                                <p class="text-gray-300 text-sm">AIZZA & SILVA DROGARIA LTDA</p>
+                                <p class="text-gray-300 text-sm">CNPJ: 18.958.697/0001-73</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal-right h-[400px] rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1562.8411155956346!2d-49.05147411331838!3d-21.307714771874213!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94be99b78f37bbd5%3A0x8d756fb624b48fab!2sDrogaria%20Alian%C3%A7a!5e0!3m2!1sen!2sus!4v1770664852830!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 border-t border-gray-800 pt-10 pb-6 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="text-xl font-bold text-white tracking-tight">Drogaria <span class="text-brand-light">Aliança</span></span>
+                <p class="text-gray-500 text-sm mt-1">© <span id="year"></span> Todos os direitos reservados.</p>
+            </div>
+            <div>
+                <button onclick="openModal()" class="text-gray-400 hover:text-white text-sm transition">Política de Privacidade</button>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/551735222140" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition pulse-custom flex items-center justify-center">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+
+    <div id="privacy-modal" class="fixed inset-0 z-[60] hidden">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl p-8 max-w-lg w-full m-4 border border-white/50">
+            <h3 class="text-2xl font-bold text-brand-dark mb-4">Política de Privacidade</h3>
+            <div class="text-gray-600 text-sm space-y-4 max-h-64 overflow-y-auto pr-2">
+                <p>A Drogaria Aliança respeita a sua privacidade e garante a segurança dos seus dados. Esta política descreve como tratamos as informações coletadas em nosso site.</p>
+                <p>1. Coleta de Dados: Não coletamos dados pessoais sensíveis automaticamente. Informações enviadas via WhatsApp são regidas pelos termos daquela plataforma.</p>
+                <p>2. Uso de Informações: As informações de contato são utilizadas estritamente para atendimento ao cliente e prestação de serviços farmacêuticos.</p>
+                <p>3. Segurança: Adotamos medidas técnicas para proteger suas informações contra acesso não autorizado.</p>
+            </div>
+            <div class="mt-6 text-right">
+                <button onclick="closeModal()" class="px-6 py-2 bg-brand-blue text-white rounded-lg hover:bg-brand-dark transition">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
